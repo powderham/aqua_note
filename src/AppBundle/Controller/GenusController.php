@@ -4,8 +4,6 @@ namespace AppBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
-
-//To use controller
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class GenusController extends Controller
@@ -15,14 +13,10 @@ class GenusController extends Controller
   */
   public function showAction($genusName)
   {
-    //To get the templating service from the container - you need to give the name of the service.
     $templating = $this->container->get('templating');
-
-    //Defining the resposne object, rendered by the templating service with a defined path.
-    $html = $templating->render('genus/show.html.twig', [
+    //A shortcut for returning a template
+    return $this->render('genus/show.html.twig', [
       'name' => $genusName
     ]);
-
-    return new Response($html);
   }
 }
