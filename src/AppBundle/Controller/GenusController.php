@@ -2,10 +2,7 @@
 
 namespace AppBundle\Controller;
 
-//To use routing
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-
-//To use response class
 use Symfony\Component\HttpFoundation\Response;
 
 //To use controller
