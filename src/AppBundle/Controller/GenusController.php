@@ -14,8 +14,8 @@ class GenusController extends Controller
   public function showAction($genusName)
   {
     $templating = $this->container->get('templating');
-    //A shortcut for returning a template
 
+    //A hardcoded array to be looped over
     $notes = [
       "Notes1",
       "Notes2",
@@ -24,6 +24,7 @@ class GenusController extends Controller
 
     return $this->render('genus/show.html.twig', [
       'name' => $genusName,
+      //Passing the array to the template
       'notes' => $notes
     ]);
   }
