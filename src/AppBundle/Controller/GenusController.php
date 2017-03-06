@@ -15,8 +15,16 @@ class GenusController extends Controller
   {
     $templating = $this->container->get('templating');
     //A shortcut for returning a template
+
+    $notes = [
+      "Notes1",
+      "Notes2",
+      "Notes3"
+    ];
+
     return $this->render('genus/show.html.twig', [
-      'name' => $genusName
+      'name' => $genusName,
+      'notes' => $notes
     ]);
   }
 }
