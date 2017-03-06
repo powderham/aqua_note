@@ -16,7 +16,7 @@ class GenusController extends Controller
   public function showAction($genusName)
   {
     //To get the templating service from the container - you need to give the name of the service.
-    $templating = $this->container->get('templating')
+    $templating = $this->container->get('templating');
 
     //Defining the resposne object, rendered by the templating service with a defined path.
     $html = $templating->render('genus/show.html.twig', [
