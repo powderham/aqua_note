@@ -19,13 +19,12 @@ class GenusController extends Controller
     $templating = $this->container->get('templating');
 
     return $this->render('genus/show.html.twig', [
-      'name' => $genusName,
-      //Passing the array to the template
-      'notes' => $notes
+      'name' => $genusName
     ]);
   }
+  //Adding a unique name to the route to be referenced
   /**
-  * @Route("/genus/{genusName}/notes")
+  * @Route("/genus/{genusName}/notes", name="genus_show_notes")
   * @Method("GET")
   */
   public function getNotesAction()
